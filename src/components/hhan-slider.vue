@@ -40,6 +40,7 @@ export default {
     document.addEventListener("mouseup", this.sliderUp);
     document.addEventListener("touchmove", this.sliderMove);
     document.addEventListener("touchend", this.sliderUp);
+    this.$emit("input", this.min);
   },
   methods: {
     sliderDown(ev) {
