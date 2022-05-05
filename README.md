@@ -1,3 +1,9 @@
+Github https://github.com/hhhxmm/hhan-ui
+
+Gitee https://gitee.com/hhan1027/hhan-ui
+
+NPM https://www.npmjs.com/package/hhan-ui
+
 # 安装
 
 适用于vue2
