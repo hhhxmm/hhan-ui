@@ -156,6 +156,7 @@ export default {
   data() {
     return {
       num: 0,
+      showText: true,
     };
   }
 };
