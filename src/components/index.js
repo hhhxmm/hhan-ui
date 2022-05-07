@@ -1,13 +1,15 @@
 import HhanRate from './hhan-rate.vue';
 import HhanSwitch from './hhan-switch.vue';
 import HhanSlider from './hhan-slider.vue';
+import HhanButton from './hhan-button.vue';
 
 import './iconfont.css';
 
 const components = [
     HhanRate,
     HhanSwitch,
-    HhanSlider
+    HhanSlider,
+    HhanButton
 ];
 
 const install = function (Vue) {
