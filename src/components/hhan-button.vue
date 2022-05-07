@@ -105,27 +105,6 @@ export default {
     border-radius: 4px;
 }
 
-/* 中等 */
-.hhan-button.medium {
-    padding: 10px 20px;
-    font-size: 14px;
-    border-radius: 4px;
-}
-
-/* 小型 */
-.hhan-button.small {
-    padding: 9px 15px;
-    font-size: 12px;
-    border-radius: 3px;
-}
-
-/* 迷你 */
-.hhan-button.mini {
-    padding: 7px 15px;
-    font-size: 12px;
-    border-radius: 3px;
-}
-
 .hhan-button:hover {
     color: #409eff;
     border-color: #c6e2ff;
@@ -275,5 +254,23 @@ export default {
     background: #f56c6c;
     border-color: #f56c6c;
     color: #fff;
+}
+
+/* 中等 */
+.hhan-button.medium {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+/* 小型 */
+.hhan-button.small {
+    padding: 9px 15px;
+    font-size: 12px;
+}
+
+/* 迷你 */
+.hhan-button.mini {
+    padding: 7px 15px;
+    font-size: 12px;
 }
 </style>
