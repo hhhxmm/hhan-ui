@@ -1,9 +1,11 @@
 <template>
   <div class="hhan-slider-box">
     <div class="slider">
-      <div class="slider-runway" ref="runway" @mousedown="sliderDown" @touchstart="sliderDown">
+      <div class="slider-runway" ref="runway" @mousedown="sliderDown" @touchstart="sliderDown" :style="runwayStyle">
         <div class="slider-bar" :style="barStyle">
-          <div class="slider-button"></div>
+          <div class="slider-button" :style="buttonStyle">
+            <div class="slider-value" v-show="showText && isMove" :style="textStyle">{{ value }}</div>
+          </div>
         </div>
       </div>
     </div>
@@ -17,6 +19,14 @@ export default {
     value: Number,
     min: { type: Number, default: 0 },
     max: { type: Number, default: 100 },
+    runwayBackroundColor: { type: String, default: "#e4e7ed" },
+    barBackgroundColor: { type: String, default: "#409eff" },
+    buttonrBackgroundColor: { type: String, default: "#fff" },
+    buttonrBorderColor: { type: String, default: "#409eff" },
+    showText: { type: Boolean, default: false },
+    textColor: { type: String, default: "#fff" },
+    textRadius: { type: Number, default: 6 },
+    textBackgroundColor: { type: String, default: "rgba(0, 0, 0, 0.5)" },
   },
   data() {
     return {
@@ -32,8 +42,27 @@ export default {
     barStyle() {
       return {
         width: 100 * this.ratio + "%",
+        backgroundColor: this.barBackgroundColor,
       };
     },
+    textStyle() {
+      return {
+        color: this.textColor,
+        borderRadius: this.textRadius + "px",
+        backgroundColor: this.textBackground,
+      };
+    },
+    runwayStyle() {
+      return {
+        backgroundColor: this.runwayBackroundColor,
+      };
+    },
+    buttonStyle() {
+      return {
+        backgroundColor: this.buttonrBackgroundColor,
+        borderColor: this.buttonrBorderColor,
+      };
+    }
   },
   mounted() {
     document.addEventListener("mousemove", this.sliderMove);
@@ -107,15 +136,29 @@ export default {
 }
 
 .slider-button {
+  position: relative;
   width: 16px;
   height: 16px;
   background-color: #fff;
   border: 2px solid #409eff;
   border-radius: 50%;
   position: absolute;
-  top: -5px;
+  top: -7px;
   right: -8px;
   transition: all 0.2s linear;
+}
+
+.slider-value {
+  position: absolute;
+  top: -36px;
+  left: -9px;
+  width: 36px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  color: #fff;
 }
 
 .slider-button:hover {

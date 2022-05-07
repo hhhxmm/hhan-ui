@@ -114,11 +114,19 @@ export default {
 
 ## hhan-slider 滑块
 
-| 属性  | 描述                    | 类型   | 默认值 | 必传 |
-| ----- | ----------------------- | ------ | ------ | ---- |
-| value | 使用v-model进行双向绑定 | Number | -      | 是   |
-| min   | 最小值                  | Number | 0      | 否   |
-| max   | 最大值                  | Number | 100    | 否   |
+| 属性                   | 描述                    | 类型    | 默认值             | 必传 |
+| ---------------------- | ----------------------- | ------- | ------------------ | ---- |
+| value                  | 使用v-model进行双向绑定 | Number  | -                  | 是   |
+| min                    | 最小值                  | Number  | 0                  | 否   |
+| max                    | 最大值                  | Number  | 100                | 否   |
+| runwayBackroundColor   |                         | String  | #e4e7ed            | 否   |
+| barBackgroundColor     | 进度背景颜色            | String  | #409eff            | 否   |
+| buttonrBackgroundColor | 按钮背景颜色            | String  | #fff               | 否   |
+| buttonrBorderColor     | 按钮边框颜色            | String  | #409eff            | 否   |
+| showText               | 是否显示文字            | Boolean | false              | 否   |
+| textColor              | 文字颜色                | String  | #fff               | 否   |
+| textRadius             | 文字背景圆角            | Number  | 6                  | 否   |
+| textBackgroundColor    | 文字背景颜色            | String  | rgba(0, 0, 0, 0.5) | 否   |
 
 ```vue
 <template>
@@ -129,6 +137,14 @@ export default {
            v-model="num" 
            :min="10" 
            :max="200" 
+           :showText="showText" 
+           :textRadius="50" 
+           textColor="#f00"
+           textBackgroundColor="rgba(255,0,0,0.6)" 
+           runwayBackroundColor="#0f0"
+           barBackgroundColor="#000"
+           buttonrBackgroundColor="#00f" 
+           buttonrBorderColor="#ff0"
       />
     </div>
   </div>
