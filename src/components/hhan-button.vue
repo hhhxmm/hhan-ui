@@ -164,6 +164,12 @@ export default {
     color: #fff;
 }
 
+.hhan-button.primary.plain {
+    color: #409eff;
+    background: #ecf5ff;
+    border-color: #b3d8ff;
+}
+
 .hhan-button.primary.plain:hover {
     background: #409eff;
     border-color: #409eff;
@@ -181,6 +187,13 @@ export default {
     background: #85ce61;
     border-color: #85ce61;
     color: #fff;
+}
+
+
+.hhan-button.success.plain {
+    color: #67c23a;
+    background: #f0f9eb;
+    border-color: #c2e7b0;
 }
 
 .hhan-button.success.plain:hover {
@@ -202,6 +215,12 @@ export default {
     color: #fff;
 }
 
+.hhan-button.info.plain {
+    color: #909399;
+    background: #f4f4f5;
+    border-color: #d3d4d6;
+}
+
 .hhan-button.info:hover {
     background: #909399;
     border-color: #909399;
@@ -221,6 +240,12 @@ export default {
     color: #fff;
 }
 
+.hhan-button.warning.plain {
+    color: #e6a23c;
+    background: #fdf6ec;
+    border-color: #f5dab1;
+}
+
 .hhan-button.warning.plain:hover {
     background: #e6a23c;
     border-color: #e6a23c;
@@ -238,6 +263,12 @@ export default {
     background: #f78989;
     border-color: #f78989;
     color: #fff;
+}
+
+.hhan-button.danger.plain {
+    color: #f56c6c;
+    background: #fef0f0;
+    border-color: #fbc4c4;
 }
 
 .hhan-button.danger.plain:hover {
