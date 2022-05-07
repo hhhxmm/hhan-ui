@@ -196,6 +196,7 @@ export default {
           :plain="btn.plain" 
           :round="btn.round"
           :circle="btn.circle" 
+          :size="btn.size"
           :nativeType="btn.nativeType"
       >
         {{ btn.text }}
