@@ -169,3 +169,102 @@ export default {
 
 ```
 
+## hhan-button 按钮
+
+| 参数        | 说明           | 类型    | 可选值                                             | 默认值 |
+| :---------- | :------------- | :------ | :------------------------------------------------- | :----- |
+| size        | 尺寸           | string  | medium / small / mini                              | —      |
+| type        | 类型           | string  | primary / success / warning / danger / info / text | —      |
+| plain       | 是否朴素按钮   | boolean | —                                                  | false  |
+| round       | 是否圆角按钮   | boolean | —                                                  | false  |
+| circle      | 是否圆形按钮   | boolean | —                                                  | false  |
+| native-type | 原生 type 属性 | string  | button / submit / reset                            | button |
+
+```vue
+<template>
+  <div id="app">
+    <div class="btns" 
+        v-for="(btns, index) in btnsList" 
+        :key="index" 
+        style="margin-bottom:10px"
+    >
+      <hhan-button 
+          v-for="(btn, i) in btns" 
+          :key="btn.text + i" 
+          :style="{ marginLeft: i > 0 ? '10px' : 0 }"
+          :type="btn.type" 
+          :plain="btn.plain" 
+          :round="btn.round"
+          :circle="btn.circle" 
+          :nativeType="btn.nativeType"
+      >
+        {{ btn.text }}
+      </hhan-button>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'App',
+  data() {
+    return {
+      btnsList: [
+        [
+          { text: '默认按钮', type: 'default' },
+          { text: '主要按钮', type: 'primary' },
+          { text: '成功按钮', type: 'success' },
+          { text: '信息按钮', type: 'info' },
+          { text: '警告按钮', type: 'warning' },
+          { text: '危险按钮', type: 'danger' }
+        ],
+        [
+          { text: '朴素按钮', type: 'default', plain: true },
+          { text: '主要按钮', type: 'primary', plain: true },
+          { text: '成功按钮', type: 'success', plain: true },
+          { text: '信息按钮', type: 'info', plain: true },
+          { text: '警告按钮', type: 'warning', plain: true },
+          { text: '危险按钮', type: 'danger', plain: true }
+        ],
+        [
+          { text: '圆角按钮', type: 'default', round: true },
+          { text: '主要按钮', type: 'primary', round: true },
+          { text: '成功按钮', type: 'success', round: true },
+          { text: '信息按钮', type: 'info', round: true },
+          { text: '警告按钮', type: 'warning', round: true },
+          { text: '危险按钮', type: 'danger', round: true }
+        ],
+        [
+          { text: '', type: 'default', circle: true },
+          { text: '', type: 'primary', circle: true },
+          { text: '', type: 'success', circle: true },
+          { text: '', type: 'info', circle: true },
+          { text: '', type: 'warning', circle: true },
+          { text: '', type: 'danger', circle: true }
+        ],
+        [
+          { text: '默认按钮', size: '' },
+          { text: '中等按钮', size: 'medium' },
+          { text: '小型按钮', size: 'small' },
+          { text: '超小按钮', size: 'mini' }
+        ],
+        [
+          { text: '默认按钮', size: '', round: true, nativeType: 'button' },
+          { text: '中等按钮', size: 'medium', round: true, nativeType: 'submit' },
+          { text: '小型按钮', size: 'small', round: true, nativeType: 'reset' },
+          { text: '超小按钮', size: 'mini', round: true, nativeType: 'test' }
+        ]
+      ]
+    };
+  },
+};
+</script>
+
+<style>
+.slider {
+  width: 800px;
+}
+</style>
+
+```
+
